@@ -1,19 +1,23 @@
 package com.qsoft.unittest;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
 import com.qsoft.Calculator;
+
 public class CalculatorUnitTest {
 
 	@Test
-	public void addNumberNull(){
+	public void addNumberNull() {
 		assertEquals(0, Calculator.add(null));
 	}
+
 	@Test
 	public void addNumberEmpty() {
 		assertEquals(0, Calculator.add(""));
 	}
+
 	@Test
 	public void addNumberNewLine() {
 		try {
@@ -21,5 +25,10 @@ public class CalculatorUnitTest {
 		} catch (Exception e) {
 			assertEquals(true, "negatives not allowed".equals(e.getMessage()));
 		}
+	}
+
+	@Test
+	public void addNumberDelimiter1() {
+		assertEquals(7, Calculator.add("//;2;5\n"));
 	}
 }

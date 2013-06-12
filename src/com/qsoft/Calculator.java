@@ -9,9 +9,16 @@ public class Calculator {
 		if (str.isEmpty()) {
 			return 0;
 		}
-		str = str.replace("\n", "");
-		String[] strTemp = str.split(",");
-		return sum(strTemp);
+		if (str.contains("//")) {
+			str = str.replace("//", "");
+			str = str.replace("\n", "");
+			String[] strTemp = str.split(";");
+			return sum(strTemp);
+		} else {
+			str = str.replace("\n", "");
+			String[] strTemp = str.split(",");
+			return sum(strTemp);
+		}
 	}
 
 	public static int sum(String[] str) {

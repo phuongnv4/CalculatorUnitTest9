@@ -6,6 +6,9 @@ public class Calculator {
 		if (str == null) {
 			return 0;
 		}
+		if (str.isEmpty()) {
+			return 0;
+		}
 		return 1;
 	}
 

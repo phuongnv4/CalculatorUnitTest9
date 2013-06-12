@@ -10,4 +10,8 @@ public class CalculatorUnitTest {
 	public void addNumberNull(){
 		assertEquals(0, Calculator.add(null));
 	}
+	@Test
+	public void addNumberEmpty() {
+		assertEquals(0, Calculator.add(""));
+	}
 }

@@ -43,10 +43,12 @@ public class CalculatorUnitTest {
 	}
 
 	@Test
+	public void addNumberDelimiter4() {
+		assertEquals(6, Calculator.add("//[//]\n1//2"));
+	}
+
+	@Test
 	public void addNumberMultiDelimiter() {
-		assertEquals(
-				6,
-				Calculator
-						.add("//[!@#$%][!@#$%^&*][^65465^^&*]\n1!@#$%2!@#$%^&*3"));
+		assertEquals(6, Calculator.add("//[**][%%][^65465^^&*]\n1**2%%3"));
 	}
 }

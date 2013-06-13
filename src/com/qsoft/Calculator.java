@@ -13,7 +13,7 @@ public class Calculator {
 		}
 		if (str.contains("//[")) {
 			do {
-				str = str.replace("//", "");
+				str = str.replace("//", ",");
 				str = str.replace("\n", "");
 				String delimiter1 = str.substring(str.indexOf("[") + 1,
 						str.indexOf("]"));

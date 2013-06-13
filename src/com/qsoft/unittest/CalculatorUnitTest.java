@@ -44,7 +44,7 @@ public class CalculatorUnitTest {
 
 	@Test
 	public void addNumberDelimiter4() {
-		assertEquals(6, Calculator.add("//[//]\n1//2"));
+		assertEquals(3, Calculator.add("//[//]\n1//2"));
 	}
 
 	@Test
